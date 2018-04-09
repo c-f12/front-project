@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moda sostenible</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="import" href="./templates/header.html" title="header">
+    <link rel="import" href="./templates/footer.html" title="footer"> -->
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/form.js"></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-bars-wrapper">
+                <img class="logo" src="images/logo.jpg" alt="Logo Moda Sostenible">
+                <span id="nav-bars" class="fa fa-bars nav__bars"></span>
+            </div>
+            <ul id="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="about.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <section class="about">
+                <h2>Sobre el autor</h2>
+                <img class="img-autor" src="./images/autor.png" alt="Clara">
+                <p class="description">Graduada en Administración y Dirección de Empresas 
+                    y Máster en Desarrollo Web y Diseño Gráfico.</p>
+            </section>
+
+            <section class="form">
+                <h2>Formulario de contacto</h2>
+                <form id="form" method="post">
+                    <div class="form__group">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <p></p>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email">
+                        <p></p>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="marcas">¿Qué marca te gusta más?</label>
+                        <select id="marcas" name="marcas">
+                            <option value="ecoalf">Ecoalf</option>
+                            <option value="ecoology">Ecoology</option>
+                            <option value="equilicua">Equilicua</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="comentarios">Escribe tus sugerencias</label>
+                        <textarea id="comentarios" name="comentarios"></textarea>
+                    </div>
+
+                    <input class="button" id="submit" type="submit" value="Enviar">
+                </form>
+
+                <div id="result-form" class="oculto result-form">
+                    <ul id="result-list" class="result-list"></ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Marcas sostenibles | Copyright 2018 </p>
+    </footer>
+</body>
+</html>
