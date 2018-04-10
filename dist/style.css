@@ -73,26 +73,26 @@ img {
 .title {
   font-family: 'Playfair Display', serif; }
 
-nav {
+header nav {
   width: 100%;
   border-bottom: 0.1rem solid #eeeeee;
   background-color: #ffffff;
   padding: 1rem 1rem 0 1rem; }
-  nav .nav-bars-wrapper {
+  header nav .nav-bars-wrapper {
     position: relative;
     height: 1.5rem;
     margin-bottom: 1rem; }
-    nav .nav-bars-wrapper .logo {
+    header nav .nav-bars-wrapper .logo {
       width: 2rem; }
-    nav .nav-bars-wrapper .nav__bars {
+    header nav .nav-bars-wrapper .nav__bars {
       font-size: 1.5rem;
       position: absolute;
       right: 0; }
-  nav ul {
+  header nav ul {
     text-align: center;
     display: none;
     padding-bottom: 1rem; }
-    nav ul li:first-child {
+    header nav ul li:first-child {
       margin-bottom: 1rem; }
 
 .hero-wrapper {
@@ -140,6 +140,27 @@ section {
     margin-bottom: 0.5rem; }
   section .intro p:last-child {
     margin-bottom: 0; }
+
+.video-wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .video-wrapper video {
+    width: 100%;
+    height: auto; }
+  .video-wrapper .btn-reproducir {
+    float: left;
+    height: 20px;
+    color: #03d0b6;
+    margin: 5px 0;
+    font-size: 20px;
+    outline: 0 none; }
+  .video-wrapper .barra {
+    position: relative;
+    float: left;
+    width: 720px;
+    height: 5px;
+    background-color: #eeeeee; }
 
 .brands article {
   margin-bottom: 1.5rem; }
@@ -242,6 +263,8 @@ footer {
     .hero-wrapper .hero__text {
       margin: auto;
       max-width: 28rem; }
+  header nav ul, header nav ul li {
+    display: inline; }
   .wrapper {
     width: 36rem;
     margin: auto;
@@ -268,8 +291,6 @@ footer {
   nav {
     text-align: right;
     overflow: hidden; }
-    nav ul, nav li {
-      display: inline-block; }
     nav li:first-child {
       margin-bottom: 0;
       margin-right: 1rem; }

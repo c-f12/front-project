@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" manifest="manifest/manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moda sostenible</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="import" href="./templates/header.html" title="header">
@@ -65,8 +66,20 @@
                 </article>
             </section>
 
+            <section>
+                <h2 class="title">¿Dónde comprar ropa ecológica?</h2>
+                <div class="video-wrapper">
+                    <video class="video" src="./video.webm"></video>
+                    <nav>
+                        <i class="fa fa-play btn-reproducir"></i>
+                        <!-- <input type="button" class="btn-reproducir" value="Reproducir"> -->
+                        <progress class="barra" max="720"></progress>
+                    </nav>
+                </div>
+            </section>
+
             <section class="brands">
-                <h2 class="title">Marcas sostenibles</h2>
+                <h2 class="title">Algunas marcas sostenibles</h2>
                 <article>
                     <h3> <span class="number">01.</span> Ecoalf</h3>
                     <div class="article-group">

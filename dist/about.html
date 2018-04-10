@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moda sostenible</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="import" href="./templates/header.html" title="header">
     <link rel="import" href="./templates/footer.html" title="footer"> -->
@@ -91,7 +92,7 @@
             window.navigator.geolocation.getCurrentPosition((position) => {
                 let latitud = position.coords.latitude;
                 let longitud = position.coords.longitude;
-
+                
                 console.log(latitud);
                 console.log(longitud)
                 var myLatLng = {lat: latitud, lng: longitud};
@@ -101,18 +102,18 @@
                     center: myLatLng
                 });
 
-                var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
-                var icon = iconBase + 'grn-blank.png'
-
                 var marker = new google.maps.Marker({
                     position: myLatLng,
                     map: map,
                     title: 'Estás aquí'
                 });
 
+                var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
+                var icon = iconBase + 'grn-blank.png'
+
                 var features = [
                     {
-                        position: new google.maps.LatLng(40.423446, -3.698578),
+                        position: new google.maps.LatLng(40.426118, -3.696861),
                         type: 'info'
                     }
                 ]
@@ -126,6 +127,9 @@
                 });
             })
         }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
     </script>
     
 </body>
