@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# v.1.0.1
+index.html
+
+CACHE:
+bundle.js
+style.css
+
+NETWORK:
+*
+
+FALLBACK:
+images/autor.jpg ecoalf.jpg

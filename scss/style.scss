@@ -96,7 +96,7 @@ nav{
     height: 400px;
     background-color: $black;
     overflow: hidden;
-    /* background-image: url('./images/hero.jpg'); */
+    /* background-image: url(./images/hero.jpg); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,6 +277,11 @@ article{
             }
         }
     }
+}
+
+#map{
+    height: 600px;
+    margin-top: 30px;
 }
 
 

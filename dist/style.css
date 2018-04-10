@@ -99,7 +99,7 @@ nav {
   height: 400px;
   background-color: #000000;
   overflow: hidden;
-  /* background-image: url('./images/hero.jpg'); */
+  /* background-image: url(./images/hero.jpg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -223,6 +223,10 @@ article .article-group {
     color: #ffffff; }
     .form .result-form .result-list li:not(:last-child) {
       margin-bottom: 1rem; }
+
+#map {
+  height: 600px;
+  margin-top: 30px; }
 
 footer {
   border-top: solid #e3e3e3 0.05rem;

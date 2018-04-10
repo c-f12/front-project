@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="import" href="./templates/header.html" title="header">
     <link rel="import" href="./templates/footer.html" title="footer"> -->
-    <script src="./js/app.js" type="module"></script>
-    <script src="./js/form.js"></script>
+    <!-- <script src="./js/app.js" type="module"></script> -->
+    <!-- <script src="./js/form.js"></script> -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -72,10 +72,61 @@
                     <ul id="result-list" class="result-list"></ul>
                 </div>
             </section>
+
+            <div id="map"></div>
+
         </div>
     </main>
+
     <footer>
         <p>Marcas sostenibles | Copyright 2018 </p>
     </footer>
+
+
+    <script src="bundle.js"></script>
+    
+    <script>
+
+        function initMap() {
+            window.navigator.geolocation.getCurrentPosition((position) => {
+                let latitud = position.coords.latitude;
+                let longitud = position.coords.longitude;
+
+                console.log(latitud);
+                console.log(longitud)
+                var myLatLng = {lat: latitud, lng: longitud};
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 12,
+                    center: myLatLng
+                });
+
+                var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
+                var icon = iconBase + 'grn-blank.png'
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: 'Estás aquí'
+                });
+
+                var features = [
+                    {
+                        position: new google.maps.LatLng(40.423446, -3.698578),
+                        type: 'info'
+                    }
+                ]
+
+                features.forEach(function(feature) {
+                    var marker = new google.maps.Marker({
+                        position: feature.position,
+                        icon: icon,
+                        map: map
+                    });
+                });
+            })
+        }
+    </script>
+    
 </body>
 </html>
