@@ -1,6 +1,7 @@
 import '../scss/style.scss';
 import { Main } from './main.js';
 import { Form } from './form.js';
+import { video } from './video.js';
 /* import { Geolocation } from './geo.js'; */
 
 

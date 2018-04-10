@@ -8,16 +8,15 @@ export class Main{
     }
 
     showMenu(){
-
-        if(menuList.style.display == 'block'){
-            this.menuList.style.display = 'none';
-            this.navBars.classList.add('fa-bars');
-            this.navBars.classList.remove('fa-times');
+        if(this.vista.menuList.style.display == 'block'){
+            this.vista.menuList.style.display = 'none';
+            this.vista.navBars.classList.add('fa-bars');
+            this.vista.navBars.classList.remove('fa-times');
         } 
         else {
-            this.menuList.style.display = 'block';
-            this.navBars.classList.remove('fa-bars');
-            this.navBars.classList.add('fa-times');
+            this.vista.menuList.style.display = 'block';
+            this.vista.navBars.classList.remove('fa-bars');
+            this.vista.navBars.classList.add('fa-times');
         }
     }
 }
