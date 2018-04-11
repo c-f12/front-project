@@ -21,11 +21,20 @@ module.exports = {
                 use: extractSass.extract({
                     use: [
                         {loader: "css-loader"},
-                        {loader: "sass-loader"}
+                        {loader: "sass-loader"},
                     ],
                     fallback: "style-loader"
                 })
-            }
+            },
+            {
+                test: /\.(png|jp(e*)g|svg)$/,  
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: './images/[name].[ext]',
+                    } 
+                }]
+            },        
         ]
     },
     plugins: [
