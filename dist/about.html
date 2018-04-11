@@ -31,14 +31,14 @@
     <main>
         <div class="wrapper">
             <section class="about">
-                <h2>Sobre el autor</h2>
+                <h2 class="title">Sobre el autor</h2>
                 <img class="img-autor" src="./images/autor.png" alt="Clara">
                 <p class="description">Graduada en Administración y Dirección de Empresas 
                     y Máster en Desarrollo Web y Diseño Gráfico.</p>
             </section>
 
             <section class="form">
-                <h2>Formulario de contacto</h2>
+                <h2 class="title">Formulario de contacto</h2>
                 <form id="form" method="post">
                     <div class="form__group">
                         <label for="nombre">Nombre*</label>
@@ -73,8 +73,12 @@
                     <ul id="result-list" class="result-list"></ul>
                 </div>
             </section>
-
-            <div id="map"></div>
+            
+            <section>
+                <h2 class="title">Localiza tu tienda más cercana</h2>
+                <div id="map"></div>
+            </section>
+            
 
         </div>
     </main>
@@ -86,50 +90,8 @@
 
     <script src="bundle.js"></script>
     
-    <script>
-
-        function initMap() {
-            window.navigator.geolocation.getCurrentPosition((position) => {
-                let latitud = position.coords.latitude;
-                let longitud = position.coords.longitude;
-                
-                console.log(latitud);
-                console.log(longitud)
-                var myLatLng = {lat: latitud, lng: longitud};
-
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 12,
-                    center: myLatLng
-                });
-
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    title: 'Estás aquí'
-                });
-
-                var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
-                var icon = iconBase + 'grn-blank.png'
-
-                var features = [
-                    {
-                        position: new google.maps.LatLng(40.426118, -3.696861),
-                        type: 'info'
-                    }
-                ]
-
-                features.forEach(function(feature) {
-                    var marker = new google.maps.Marker({
-                        position: feature.position,
-                        icon: icon,
-                        map: map
-                    });
-                });
-            })
-        }
-    </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8QqTQo_CFLe_w4RCTtEB7S9ChSgoJFNM">
     </script>
     
 </body>
