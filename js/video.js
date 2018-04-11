@@ -1,5 +1,5 @@
 function video () {
-   const maximo = 720; // ancho total en px de la barra de progreso, definido en css 
+   const maximo = 720; // ancho total en px de la barra de progreso
    let oVideo = document.querySelector('.video');
    let oReproducir = document.querySelector('.btn-reproducir');
    let oBarra = document.querySelector('.barra');
@@ -21,10 +21,9 @@ function video () {
             oReproducir.classList.add('fa-pause');
             var bucle = window.setInterval(estado, 1000);
             // cada segundo ejecuto la función estado, que pintará la barra de estado
-            // bucle corresponde al identificator del setInterval
             return bucle;
         }	 
-   }; // fin de la funcion clicReproducir, manejadora de click en el boton
+   };
 
    function clickBarra (e) {
        if(!oVideo.paused && !oVideo.ended) {
@@ -38,26 +37,21 @@ function video () {
             oBarra.value = ratonX;
             // cambio de aspecto de la barra
        }
-   }; // fin de la funcion clicBarra, manejadora de click en la barra
+   };
 
    function estado(bucle){
        if(!oVideo.ended){
            // si continua la reproducción
            var total=parseInt(oVideo.currentTime * maximo/oVideo.duration);
-           //paso el curretTime a pixels
            oBarra.value = total;
-           // actualizo el aspecto de la barra
        }else{
            oBarra.value = 0;
-           // actualizo el aspecto de la barra
            oReproducir.classList.add('fa-play');
            oReproducir.classList.remove('fa-pause');
-           // actualizo el aspecto del boton
            window.clearInterval(bucle);
            // termino con la ejecución repetida de la función
        };
-   }; // Fin de la función estado()
-
+   };
 };
 
 
