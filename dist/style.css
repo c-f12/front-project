@@ -99,7 +99,7 @@ header nav {
   height: 400px;
   background-color: #000000;
   overflow: hidden;
-  /* background-image: url(./images/hero.jpg); */
+  background-image: url(./images/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -263,8 +263,6 @@ footer {
     .hero-wrapper .hero__text {
       margin: auto;
       max-width: 28rem; }
-  header nav ul, header nav ul li {
-    display: inline; }
   .wrapper {
     width: 36rem;
     margin: auto;
@@ -288,15 +286,17 @@ footer {
     float: right; } }
 
 @media screen and (min-width: 1024px) {
-  nav {
+  header nav {
     text-align: right;
     overflow: hidden; }
-    nav li:first-child {
+    header nav ul, header nav li {
+      display: inline; }
+    header nav li:first-child {
       margin-bottom: 0;
       margin-right: 1rem; }
-    nav .nav-bars-wrapper {
+    header nav .nav-bars-wrapper {
       float: left; }
-      nav .nav-bars-wrapper .nav__bars {
+      header nav .nav-bars-wrapper .nav__bars {
         display: none; }
   .hero-wrapper .hero__text {
     font-size: 3.5rem;
