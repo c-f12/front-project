@@ -99,7 +99,7 @@ header{
     height: 400px;
     background-color: $black;
     overflow: hidden;
-    /* background-image: url(./images/hero.jpg); */
+    background-image: url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -335,10 +335,6 @@ footer{
         }
     }
 
-    header nav ul, header nav ul li{
-        display: inline;
-    }
-
     .wrapper{
         width: 36rem;
         margin: auto;
@@ -379,22 +375,30 @@ footer{
 }
 
 @media screen and (min-width: $md){
-    nav{
-        text-align: right;
-        overflow: hidden;
-        
-        li{
-            &:first-child{
-                margin-bottom: 0;
-                margin-right: 1rem;
+    
+    header{
+        nav{
+            text-align: right;
+            overflow: hidden;
+
+            ul, li{
+                display: inline;
+            }
+            
+            li{
+                &:first-child{
+                    margin-bottom: 0;
+                    margin-right: 1rem;
+                }
+            }
+            .nav-bars-wrapper{
+                float: left;
+                .nav__bars{
+                    display: none;
+                }
             }
         }
-        .nav-bars-wrapper{
-            float: left;
-            .nav__bars{
-                display: none;
-            }
-        }
+
     }
 
     .hero-wrapper .hero__text{
